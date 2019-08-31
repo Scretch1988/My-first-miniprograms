@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer = parseInt (Math.random() * 100);
+	var userAnswer = +prompt ("Угадайте число от 0 до 100");
+	
+	if(userAnswer == answer){
+		document.write("Поздравляем, вы угадали!");
+	} else if(userAnswer > answer){
+		document.write("Вы ввели слишком большое число");
+	}else if(userAnswer < answer){
+		document.write("Вы ввели слишком маленькое число");
+	}
+
+</script>
