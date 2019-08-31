@@ -9,9 +9,15 @@
 			document.write("Поздравляем, вы угадали!");
 			break;
 		} else if(userAnswer > answer){
-			document.write("Вы ввели слишком большое число");
+			document.write("Вы ввели слишком большое число. ");
 		}else if(userAnswer < answer){
-			document.write("Вы ввели слишком маленькое число");
+			document.write("Вы ввели слишком маленькое число. ");
 		}
+		document.write("У Вас осталось" + (7 - tryCount) + "попыток <br>");
+
+
+		userAnswer = +prompt ("Попробуйте еще раз. Введите число от 0 до 100");
 	}
+
+	document.write ("Правильный ответ " + answer);	
 </script>
