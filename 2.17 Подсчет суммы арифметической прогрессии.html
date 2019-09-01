@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var start = 10;
+	var n = 32;
+	var step = 2;
+	var sum = 0;
+	var next = start;
+	while (next <= n)
+	{
+		sum = sum + next;
+		next = next + step;
+	}
+
+	document.write ("Начало отсчета: " + start + "<br>");
+	document.write ("Число до которого считаем: " + n + "<br>");
+	document.write ("Шаг " + step + "<br>");
+	document.write ("Итоговая сумма: " + sum + "<br>");
+</script>
