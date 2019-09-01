@@ -3,15 +3,19 @@
 	
 var n = +prompt ("Пожалуйста, введите число");
 
-if (isNaN(n)) {
+if (isNaN(n)) 
+{
 	document.write ("Нужно было ввести число");
-} else if (n < 0) {
+} else if (n < 0) 
+{
 	document.write ("Нужно было ввести положительное число");
-} else {
+} else 
+{
 	var sum = 0;
-	for (var i = 0; i <= n; i++) {
+	for (var i = 0; i <= n; i++) 
+	{
 		sum = sum + i; // sum += i;
-		}
+	}
 		document.write (sum);
 }
 </script>
