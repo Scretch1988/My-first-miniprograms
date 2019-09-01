@@ -7,9 +7,21 @@
 <body>
 <script type="text/javascript">
 	
+	var deposit = +prompt ("Введите сумму ");
+	var percent = +prompt ("Введите годовой процент по депозиту");
+	var years = 5;
+	var sum = 0;
+	var income = deposit * percent / 100;
 
-
-
+	for (var i = 1; i <= years; i++) 
+	{
+		for (var j = deposit; ; j = deposit + income)
+		{
+			sum = deposit + income;
+		}
+		alert ("За " + i + " год размер вклада составит " + sum + " рублей" + "<br />");
+	}
+	
 </script>
 </body>
 </html>
