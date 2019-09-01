@@ -9,19 +9,20 @@
 	
 	var deposit = +prompt ("Введите сумму ");
 	var percent = +prompt ("Введите годовой процент по депозиту");
-	var years = 5;
+	var year = 1;
 	var sum = 0;
 	var income = deposit * percent / 100;
 
-	for (var i = 1; i <= years; i++) 
+	for (; year <= 5; year++) 
 	{
-		for (var j = deposit; ; j = deposit + income)
-		{
-			sum = deposit + income;
-		}
-		alert ("За " + i + " год размер вклада составит " + sum + " рублей" + "<br />");
+		sum = deposit + income;
+		document.write ("За " + year + " год размер вклада составит " + sum + " рублей" + "<br />");
+			for (; year <= 5; year++)
+			{
+				sum = deposit + income;
+				document.write ("За " + year + " год размер вклада составит " + sum + " рублей" + "<br />")
+			}
 	}
-	
-</script>
+	</script>
 </body>
 </html>
