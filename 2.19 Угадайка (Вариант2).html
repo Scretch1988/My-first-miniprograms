@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Угадай число</title>>
+</head>
+<body>
+<script type="text/javascript">
+	var answer = parseInt(Math.random() * 100);
+	var userAnswer = +prompt ("Угадайте число от 0 до 100");
+	var maxTryCount = 5;
+	
+	for (var tryCount = 1; tryCount < maxTryCount; tryCount++)
+	{
+		if (userAnswer == answer)
+		{
+			alert ("Поздравляем, вы угадали!");
+			break;
+		} 
+		else if (userAnswer > answer)
+		{
+			alert ("Вы ввели слишком большое число. ");
+		}
+		else if (userAnswer < answer)
+		{
+			alert ("Вы ввели слишком маленькое число. ");
+		}
+		userAnswer = +prompt ("Попробуйте еще раз. Введите число от 0 до 100\n У Вас осталось " + (maxTryCount - tryCount) + " попыток");
+	}
+
+	if (tryCount > maxTryCount)
+		alert ("Вы проиграли!");
+
+	alert ("Правильный ответ " + answer);	
+</script>
+</body>
+</html>
