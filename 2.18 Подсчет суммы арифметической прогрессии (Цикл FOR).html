@@ -3,13 +3,12 @@
 	
 	var start = 10;        //Начало отсчета (включительно)
 	var n = 32;            // До какого числа считаем
-	var step = 1;          // Шаг
+	var step = 2;          // Шаг
 	var sum = 0;           // Здесь будем хранить сумму всех чисел от start до n
 	var next = start;      // Следующее число
-	while (next <= n)
+	for (var i = 10; i <= n; i++) 
 	{
-		sum = sum + next;
-		next = next + step;
+		sum = sum + i
 	}
 
 	document.write ("Начало отсчета: " + start + "<br>");
