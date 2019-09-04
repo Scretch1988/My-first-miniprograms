@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Угадай число </title>
+</head>
+<body>
+<script type="text/javascript">
+	var answer = parseInt(Math.random() * 100);
+	var FirstuserAnswer = +prompt ("Игрок № 1. Угадайте число от 0 до 100");
+	var SeconduserAnswer = +prompt ("Игрок № 2. Угадайте число от 0 до 100");
+		
+	for (; ;)
+	{
+		if (FirstuserAnswer == answer)
+		{
+			alert ("Игрок № 1. Поздравляем, вы угадали!");
+			break;
+		} 
+		else if (FirstuserAnswer > answer)
+		{
+			var question = prompt ("Игрок № 1. Вы ввели слишком большое число. Будете продолжать отгадывать?");
+			if (question == "Нет" || question == "НЕТ" || question == "нет" || question == "No" || question == "NO" || question == "no")
+			break;
+		}
+		else if (FirstuserAnswer < answer)
+		{
+			question = prompt ("Игрок № 1. Вы ввели слишком маленькое число. Будете продолжать отгадывать?");
+			if (question == "Нет" || question == "НЕТ" || question == "нет" || question == "No" || question == "NO" || question == "no")
+			break;
+		}
+		if (SeconduserAnswer == answer)
+		{
+			alert ("Игрок № 2. Поздравляем, вы угадали!");
+			break;
+		}
+		else if (SeconduserAnswer > answer)
+		{
+			question = prompt ("Игрок № 2. Вы ввели слишком большое число. Будете продолжать отгадывать?");
+			if (question == "Нет" || question == "НЕТ" || question == "нет" || question == "No" || question == "NO" || question == "no")
+			break;
+		}
+		else if (SeconduserAnswer < answer)
+		{
+			question = prompt ("Игрок № 2. Вы ввели слишком маленькое число. Будете продолжать отгадывать?");
+			if (question == "Нет" || question == "НЕТ" || question == "нет" || question == "No" || question == "NO" || question == "no")
+			break;
+		}
+		FirstuserAnswer = +prompt ("Игрок № 1. Введите число от 0 до 100");
+		SeconduserAnswer = +prompt ("Игрок № 2. Введите число от 0 до 100");	
+	}
+	alert ("Спасибо за игру!");
+</script>
+</body>
+</html>

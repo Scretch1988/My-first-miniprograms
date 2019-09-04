@@ -1,0 +1,131 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Это игра для двоих, в которой нужно первым угадать число от 1 до 100.\n\nЧтобы сыграть или продолжить игру с Арчи(ботом), один из игроков должен отказаться от игры в любой момент, то есть в свой ход ввести \"0\".");
+
+	var user1Name = prompt("Введите имя первого игрока");
+	var user2Name = prompt("Введите имя второго игрока");
+
+	var answer = parseInt(Math.random() * 100);
+	
+	do
+		var user1Answer = +prompt(user1Name + ", угадайте число от 1 до 100\n\n(Если передумали играть, введите 0)");
+	while(isNaN(user1Answer) || user1Answer < 0 || user1Answer > 100);
+
+	do
+		var user2Answer = +prompt(user2Name + ", угадайте число от 1 до 100\n\n(Если передумали играть, введите 0)");
+	while(isNaN(user2Answer) || user2Answer < 0 || user2Answer > 100);
+
+
+	while(true){
+		if(user1Answer == 0 || user2Answer == 0)
+			break;
+
+		if(user1Answer == answer || user2Answer == answer){
+			if(user1Answer == user2Answer)
+				alert("Поздравляю, " + user1Name + ", " + user2Name + ", это верный ответ!\nУ вас ничья!");
+			else{
+				if(user1Answer == answer)
+					alert("Поздравляю, " + user1Name + ", Вы угадали! И победили!");
+				else
+					alert("Поздравляю, " + user2Name + ", Вы угадали! И победили!");
+			}
+			break;
+		} else {
+			if(user1Answer > answer)
+				alert(user1Name + ", Вы ввели слишком большое число.");
+			else
+				alert(user1Name + ", Вы ввели слишком маленькое число.");
+
+			if(user2Answer > answer)
+				alert(user2Name + ", Вы ввели слишком большое число.");
+			else
+				alert(user2Name + ", Вы ввели слишком маленькое число.");
+		}
+		do
+			user1Answer = +prompt(user1Name + ", попробуйте еще раз. Введите число от 1 до 100.\n\n(Если не хотите продолжать игру, введите 0)");
+		while(isNaN(user1Answer) || user1Answer < 0 || user1Answer > 100);
+
+		do
+			user2Answer = +prompt(user2Name + ", попробуйте еще раз. Введите число от 1 до 100.\n\n(Если не хотите продолжать игру, введите 0)");
+		while(isNaN(user2Answer) || user2Answer < 0 || user2Answer > 100);	
+		}
+
+
+//Ниже следует дополнительный код. Он нужен чтобы иметь возможность сыграть с Арчи(ботом)! Это даже не дополнительное домашнее задание, но если будет желание - попробуйте, посмотрите. Буду рад комментариям! А если такой вариант программы Вас чем-нибудь напрягает, просто закомментируйте все, что находится ниже, и останется только игра для двоих.
+
+
+	var mes2 = ", хотите продолжить игру с Арчи?\nВведите \"ДА!\", если хотите.";
+
+	if(user1Answer != 0 && user2Answer == 0){
+		var chooseArchi = prompt(user1Name + mes2);
+		var user00Answer = user1Answer;
+		var user00Name = user1Name;
+	} else if(user1Answer == 0 && user2Answer != 0){
+		chooseArchi = prompt(user2Name + mes2);
+		user00Answer = user2Answer;
+		user00Name = user2Name;
+	}
+    if(chooseArchi == "ДА!"){
+    	do{
+    		alert("Для честной игры, пожалуйста, введите минимально и максимально возможное значение верного ответа с учетом предыдущих действий в игре.\nЕсли это самое начало игры, введите 1 и 100.");
+    		var min = +prompt("Введите минимально возможное значение ответа.");
+    		var max = +prompt("Введите максимально возможное значение ответа.");
+		}while(isNaN(min) || isNaN(max));
+
+		min--;
+		max++;
+
+		alert("Привет! Меня зовут Арчи.\n\nСыграем!!!")
+
+		while(true){
+			do
+				var archiAnswer = parseInt(Math.random() * 100);
+			while(archiAnswer <= min || archiAnswer >= max)
+
+			alert("Арчи выбрал число " + archiAnswer)
+
+			if(user00Answer == answer || archiAnswer == answer){
+				if(user00Answer == archiAnswer)
+					alert(user00Name + ", это верный ответ!\nУ вас с Арчи ничья!");
+				else{
+					if(user00Answer == answer)
+						alert("Поздравляю, " + user1Name + ", Вы угадали и победили!");
+					else
+						alert("Арчи победил!");
+				}
+				break;
+			} else {
+				if(user00Answer > answer && archiAnswer > answer){				
+					alert(user00Name + ", Вы ввели слишком большое число.\nЧисло Арчи тоже больше, чем нужно");
+					if(user00Answer < archiAnswer)
+						max = user00Answer;
+					else
+						max = archiAnswer;
+				} else if(user00Answer > answer && archiAnswer < answer){
+					alert(user00Name + ", Вы ввели слишком большое число.\nЧисло Арчи меньше, чем нужно");
+					max = user00Answer;
+					min = archiAnswer;
+				} else if(user00Answer < answer && archiAnswer < answer){
+					alert(user00Name + ", Вы ввели слишком маленькое число.\nЧисло Арчи тоже меньше, чем нужно");
+					if(user00Answer > archiAnswer)
+						min = user00Answer;
+					else
+						min = archiAnswer;
+				} else if(user00Answer < answer && archiAnswer > answer){
+					alert(user00Name + ", Вы ввели слишком маленькое число.\nЧисло Арчи больше, чем нужно");
+					max = archiAnswer;
+					min = user00Answer;
+				}					
+			}
+			do
+				user00Answer = +prompt(user00Name + ", попробуйте еще раз. Введите число от 1 до 100\n\n(Если не хотите продолжать игру, введите 0)");
+			while(isNaN(user00Answer) || user00Answer < 0 || user00Answer > 100);
+
+			if(user00Answer == 0)
+				break;	
+		}					
+	}
+
+
+</script>

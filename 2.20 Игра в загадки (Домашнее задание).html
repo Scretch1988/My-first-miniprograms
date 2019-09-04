@@ -9,71 +9,58 @@
 	
 	var name = prompt ("Здравствуйте! Как Вас зовут?");
 	alert ("Уважаемый пользователь " + name +"!\nСейчас мы загадаем Вам четыре загадки, а вы попробуйте отгадать их!");
+	var sum = 0;
 
 	var answerOne = prompt ("Загадка №1.\nЛетом серый, а зимой белый.");
-	if (answerOne == "ЗАЯЦ" || answerOne == "Заяц" || answerOne == "заяц" || answerOne == "Зайчик" || answerOne == "зайчик" || answerOne == "ЗАЙЧИК" || answerOne == "ЗАЙКА" || answerOne == "Зайка" || answerOne == "зайка")
+	answerOne = answerOne.toLowerCase();
+	if (answerOne == "заяц" || answerOne == "зайчик" || answerOne == "зайка")
 	{
 		alert ("Мы вас поздравляем! Это правильный ответ! Осталось три загадки!");
-		answerOne = 1;
+		sum++;
 	}
 	else
 	{
-		alert ("Нам очень жаль, это неправильный ответ. Осталось три загадки!")
-		answerOne = 0;
+		alert ("Нам очень жаль, это неправильный ответ. Осталось три загадки!");
 	}
 	
-		var answerTwo = prompt ("Загадка №2.\nСемьдесят одежек и все без застежек.");
-		if (answerTwo == "Капуста" || answerTwo == "КАПУСТА" || answerTwo == "капуста")
+		answerTwo = prompt ("Загадка №2.\nСемьдесят одежек и все без застежек.");
+		answerTwo = answerTwo.toLowerCase();
+		if (answerTwo == "капуста")
 		{
 			alert ("Мы вас поздравляем! Это правильный ответ! Осталось две загадки!");
-			answerTwo = 1;
+			sum++;
 		}
 		else
 		{
 			alert ("Нам очень жаль, это неправильный ответ. Осталось две загадки!");
-			answerTwo = 0;
 		}
 	
-			var answerThree = prompt ("Загадка №3.\nТемной ночью, ясным днем\nОн сражается с огнем.\nВ каске, будто воин славный,\nНа пожар спешит... ");
-			if (answerThree == "Пожарный" || answerThree == "ПОЖАРНЫЙ" || answerThree == "пожарный")
+			answerThree = prompt ("Загадка №3.\nТемной ночью, ясным днем\nОн сражается с огнем.\nВ каске, будто воин славный,\nНа пожар спешит... ");
+			answerThree = answerThree.toLowerCase();
+			if (answerThree == "пожарный")
 			{
 				alert ("Мы вас поздравляем! Это правильный ответ! Осталась одна загадка!");
-				answerThree = 1;
+				sum++;
 			}
 			else
 			{
 				alert ("Нам очень жаль, это неправильный ответ. Осталась одна загадка!");
-				answerThree = 0;
 			}
 	
-				var answerFour = prompt ("Загадка №4.\nНабита пухом, лежит под ухом.");
-				if (answerFour == "Подушка" || answerFour == "ПОДУШКА" || answerFour == "подушка")
+				 answerFour = prompt ("Загадка №4.\nНабита пухом, лежит под ухом.");
+				 answerFour = answerFour.toLowerCase();
+				if (answerFour == "подушка")
 				{
 					alert ("Мы вас поздравляем! Это правильный ответ!");
-					answerFour = 1;
+					sum++;
 				}
 				else
 				{
 					alert ("Нам очень жаль, это неправильный ответ.");
-					answerFour = 0;
 				}
 	
-	var sum = 0;
-	sum = (sum + answerOne + answerTwo + answerThree + answerFour);
-	if (sum == 0)
-	{
-		alert ("Уважаемый пользователь " + name +"!\nВы дали " + sum + " правильных ответов!")
-	}
-	else if (sum == 1)
-	{
-		alert ("Уважаемый пользователь " + name +"!\nВы дали " + sum + " правильный ответ!")
-	}	
-	else if (sum == 2 || sum == 3 || sum == 4)
-	{
-		alert ("Уважаемый пользователь " + name +"!\nВы дали " + sum + " правильных ответа!")
-	}
-	
-	alert ("Благодарим Вас за Игру!");
+		
+	alert ("Благодарим Вас за Игру! Вы угадали " + sum + " загадки");
 </script>
 </body>
 </html>

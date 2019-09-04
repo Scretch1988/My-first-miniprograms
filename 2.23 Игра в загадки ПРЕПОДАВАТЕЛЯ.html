@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Игра в загадки </title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var name = prompt ("Здравствуйте! Как Вас зовут?");
+	alert ("Уважаемый пользователь " + name +"!\nСейчас мы загадаем Вам четыре загадки, а вы попробуйте отгадать их!");
+	
+	var userAnswer = prompt ("Загадка №1.\nЛетом серый, а зимой белый.");
+	var sum = 0;
+	userAnswer = userAnswer.toLowerCase();
+	if (userAnswer == "заяц" || userAnswer == "зайчик" || userAnswer == "зайка")
+	{
+		alert ("Мы вас поздравляем! Это правильный ответ! Осталось три загадки!");
+		sum++;
+	}
+	else
+		alert ("Нам очень жаль, это неправильный ответ. Осталось три загадки!");
+	
+	userAnswer = prompt ("Загадка №2.\nСемьдесят одежек и все без застежек.");
+	userAnswer = userAnswer.toLowerCase();
+	if (userAnswer == "капуста")
+	{
+		alert ("Мы вас поздравляем! Это правильный ответ! Осталось две загадки!");
+		sum++;
+	}
+	else
+		alert ("Нам очень жаль, это неправильный ответ. Осталось две загадки!");
+		
+	userAnswer = prompt ("Загадка №3.\nТемной ночью, ясным днем\nОн сражается с огнем.\nВ каске, будто воин славный,\nНа пожар спешит... ");
+	userAnswer = userAnswer.toLowerCase();
+	if (userAnswer == "пожарный")
+	{
+		alert ("Мы вас поздравляем! Это правильный ответ! Осталась одна загадка!");
+		sum++;
+	}
+	else
+		alert ("Нам очень жаль, это неправильный ответ. Осталась одна загадка!");
+		
+	 userAnswer = prompt ("Загадка №4.\nНабита пухом, лежит под ухом.");
+	 userAnswer = userAnswer.toLowerCase();
+	if (userAnswer == "подушка")
+	{
+		alert ("Мы вас поздравляем! Это правильный ответ!");
+		sum++;
+	}
+	else
+		alert ("Нам очень жаль, это неправильный ответ.");
+		
+	alert ("Благодарим Вас за Игру! Вы угадали " + sum + " загадки");
+</script>
+</body>
+</html>
