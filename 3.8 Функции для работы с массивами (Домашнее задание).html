@@ -7,9 +7,9 @@
 <body>
 <script type = "text/javascript">
 
-	
-	function numbers (length)
-	{
+// а) Написать функцию, которая принимает в качестве параметра число N. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… N
+
+	function numbers (length){
 		var numbers = [];
 		
 		for (var i = 1; i <= length; i++){
@@ -20,9 +20,36 @@
 	var numbers = numbers (10);
 	alert (numbers);
 
+// б) Написать функцию, которая принимает массив чисел. Результатом работы функции является сумма чисел этого массива
+
+	function summ (n){
+		
+		var summ = 0;
+		for (var i = 1; i <= n; i++){
+		summ += i;
+		}
+		return summ;
+	}
+	var summ = summ (7);
+	alert (summ);
+
+// c) * Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает максимальное число
 
 
 
+function getRandomnamber (max){
+		return Math.round (Math.random() * max)
+	}
+	
+	function generateRandomNumberArray(length){
+		var arr = [];
+		
+		for (var i = 0; i < length; i++){
+			var randomNumber = getRandomnamber(100);
+			arr.push(randomNumber);
+		}
+	}
+var numbers = generateRandomNumberArray(5);
 
 </script>
 </body>
