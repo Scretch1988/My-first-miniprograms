@@ -8,20 +8,19 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="#">Главная</a>
-		<a href="puzzle.html">Загадки</a>
-		<a href="guess.html">Угадайка</a>
-	</div>
+
+<?php
+	inclued_get_data "menu.php";
+?>
 
 	<h1>Личный сайт студента GeekBrains</h1>
 
 	<div class="center">
 	<img src="img/photo.png">
 		<div class="box_text">
-			<p><b>Добрый день</b>. Меня зовут <i>Василий Пупкин</i>. Я совсем недавно начал программировать, однако уже написал свой первый сайт.</p>
+			<p><b>Добрый день</b>. Меня зовут <i>Виктор Овсянников</i>. Мне 31 год и я хочу изучить программирование чтобы в дальнейшем быть квалифицированным специалистом.</p>
 
-			<p>В этом мне помог IT-портал <a href="https://geekbrains.ru">GeekBrains</a></p>
+			<p>В этом мне помогает IT-портал <a href="https://geekbrains.ru">GeekBrains</a></p>
 
 			<p>На этом сайте вы сможете сыграть в несколько игр, которые я написал: <br>
 			<a href="#">Главная</a>,
@@ -32,7 +31,7 @@
 	</div>
 </div>
 <div class="footer">
-	Copyright &copy; Vasily Pupkin
+	Copyright &copy; <? php echo date(Y);?> Viktor Ovsyannikov
 <div>
 
 

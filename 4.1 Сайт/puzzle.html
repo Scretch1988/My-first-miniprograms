@@ -21,9 +21,9 @@
 		
 		function checkAnswers() {
 
-			checkAnswer("userAnswer1", ["сон", "сноведение"]);
-			checkAnswer("userAnswer2", ["морской", "укус акулы"]);
-			checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
+			checkAnswer("userAnswer1", ["заяц", "зайчик","зайка"]);
+			checkAnswer("userAnswer2", ["капуста"]);
+			checkAnswer("userAnswer3", ["пожарный"]);
 
 			alert("Вы отгадали " + score + " загадок");
 
@@ -34,11 +34,9 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="index.html">Главная</a>
-		<a href="#">Загадки</a>
-		<a href="guess.html">Угадайка</a>
-	</div>
+<?php
+	inclued_get_data "menu.php";
+?>
 
 <div class="contentWrap">
     <div class="content">
@@ -48,13 +46,13 @@
 
 			<div class="box">
 
-				<p>Что можно увидеть с закрытыми глазами?</p>
+				<p>Летом серый, а зимой белый.</p>
 				<input type="text" id="userAnswer1">
 
-				<p>Какой болезнью никто не болеет на суше?</p>
+				<p>Семьдесят одежек и все без застежек.</p>
 				<input type="text" id="userAnswer2">
 
-				<p>Какой конь не ест овса?</p>
+				<p>Темной ночью, ясным днем <br> Он сражается с огнем. <br> В каске, будто воин славный, <br> На пожар спешит...</p>
 				<input type="text" id="userAnswer3">
 
 				<br>
@@ -70,7 +68,7 @@
 
 </div>
 <div class="footer">
-	Copyright &copy; Vasily Pupkin
+	Copyright &copy; Viktor Ovsyannikov
 <div>
 
 
