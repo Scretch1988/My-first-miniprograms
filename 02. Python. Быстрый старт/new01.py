@@ -1,3 +1,5 @@
+import os
+
 print("Я суперпрограмма Python!!!")
 print("Привет программист!")
 
@@ -12,7 +14,7 @@ if answer == 'Y':
     print(" [2] - выведу полезную информацию о системе")
     do = int(input ("Введите номер действия"))
     if do == 1:
-        pass
+        print(os.listdir())
     elif do == 2:
         pass
 elif answer == 'N':
