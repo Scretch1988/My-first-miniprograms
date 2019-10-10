@@ -9,4 +9,4 @@ if navar > 0:
     oneplus = rent / people
     print(f'каждый сотрудника вам заработал по {oneplus}')
 else:
-    print('Вы отработали в убыток')
+    print('Вы отработали в убыток ')
